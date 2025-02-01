@@ -1,10 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
-import Heading from "../components/Heading";
+import Card from "../components/Card";
 import Categories from "../components/Categories";
+import Heading from "../components/Heading";
 
 const Home = () => {
-    const categories = useLoaderData()
+    
+  const categories = useLoaderData();
+//   const data = useLoaderData();
   return (
     <div className="py-5">
       {/* Banner */}
@@ -19,6 +22,7 @@ const Home = () => {
       {/* Categories tab section */}
       <Categories categories={categories} />
       {/* Dynamic Nested Component */}
+      
     </div>
   );
 };

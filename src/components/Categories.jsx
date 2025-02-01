@@ -3,7 +3,6 @@ import Category from "./Category";
 import CoffeeCards from "./CoffeeCards";
 
 const Categories = ({ categories }) => {
-  console.log(categories);
   return (
     <div>
       <div role="tablist" className="tabs tabs-lift">
