@@ -3,8 +3,12 @@ import { NavLink } from "react-router-dom";
 
 const Category = ({ category }) => {
   return (
-    <div>
-      <NavLink to={`/category/${category.category}`} role="tab" className="tab">
+    <div role="tablist" className="tabs tabs-lift">
+      <NavLink
+        to={`/category/${category.category}`}
+        role="tab"
+        className={({ isActive }) => `tab text-2xl ${isActive ? "tab-active" : ""}`}
+      >
         {category.category}
       </NavLink>
     </div>
