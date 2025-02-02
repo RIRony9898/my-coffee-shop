@@ -27,7 +27,11 @@ const routes = createBrowserRouter([
           },
         ],
       },
-      { path: "/coffees", element: <Coffees /> },
+      {
+        path: "/coffees",
+        element: <Coffees />,
+        loader: () => fetch("/coffees.json"),
+      },
       { path: "/dashboard", element: <Dashboard /> },
     ],
   },

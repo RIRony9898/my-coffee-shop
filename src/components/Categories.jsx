@@ -4,7 +4,7 @@ import CoffeeCards from "./CoffeeCards";
 
 const Categories = ({ categories }) => {
   return (
-    <div className="">
+    <div className="mb-5">
       <div role="tablist" className="tabs tabs-lift justify-center mb-10">
         {
             categories.map((category) =><Category key={category.id} category={category} />)

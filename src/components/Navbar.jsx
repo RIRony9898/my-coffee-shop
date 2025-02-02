@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar backdrop-blur-xl bg-white/30 shadow-sm fixed z-50">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,28 +27,66 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <NavLink className="active" to="/">
+              <NavLink
+                className={({ isActive }) =>
+                  `font-bold ${
+                    isActive ? "text-warning" : "hover:text-warning"
+                  }`
+                }
+                to="/"
+              >
                 Home
               </NavLink>
-              <NavLink className="active" to="/coffees">
+              <NavLink
+                className={({ isActive }) =>
+                  `font-bold ${
+                    isActive ? "text-warning" : "hover:text-warning"
+                  }`
+                }
+                to="/coffees"
+              >
                 Coffees
               </NavLink>
-              <NavLink className="active" to="/dashboard">
+              <NavLink
+                className={({ isActive }) =>
+                  `font-bold ${
+                    isActive ? "text-warning" : "hover:text-warning"
+                  }`
+                }
+                to="/dashboard"
+              >
                 Dashboard
               </NavLink>
             </ul>
           </div>
-          <Link to='/' className="btn btn-ghost text-xl">My Coffee Shop</Link>
+          <Link to="/" className="btn btn-ghost text-3xl font-bold">
+            My Coffee Shop
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-12">
-            <NavLink className="active" to="/">
+            <NavLink
+              className={({ isActive }) =>
+                `font-bold ${isActive ? "text-warning" : "hover:text-warning"}`
+              }
+              to="/"
+            >
               Home
             </NavLink>
-            <NavLink className="active" to="/coffees">
+            <NavLink
+              className={({ isActive }) =>
+                `font-bold ${isActive ? "text-warning" : "hover:text-warning"}`
+              }
+              to="/coffees"
+            >
               Coffees
             </NavLink>
-            <NavLink className="active" to="/dashboard">
+            <NavLink
+              className={({ isActive }) =>
+                `font-bold ${isActive ? "text-warning" : "hover:text-warning"}`
+              }
+              to="/dashboard"
+            >
               Dashboard
             </NavLink>
           </ul>
